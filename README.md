@@ -137,6 +137,7 @@ EXAMPLES
 
 ### `tempo logHR START END DURATION [FLEX]`
 
+```
 REQUIREMENT
   Create an alias for HR ticket. Something like `tempo alias:set HR tempo-25`
 
@@ -148,6 +149,7 @@ ARGUMENTS
   END      work end time in hh:mm format, where mm is 00,15,30,45
   DURATION work duration in hours in float format, like 5.5
   [FLEX]   flex time in hours in float format, like 0.5
+```
 
 ### `tempo list [WHEN]`
 
