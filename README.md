@@ -48,7 +48,7 @@ Succesfully deleted worklog 123458. Deleted worklog details: ABC-1, 14:00-14:30 
 * [`tempo help [COMMAND]`](#tempo-help-command)
 * [`tempo setup`](#tempo-setup)
 * [`tempo log ISSUE_KEY_OR_ALIAS DURATION_OR_INTERVAL [WHEN]`](#tempo-log-issue_key_or_alias-duration_or_interval-when)
-* [`tempo logHR START END DURATION [FLEX]`](#tempo-log-issue_key_or_alias-duration_or_interval-when)
+* [`tempo logHR START END DURATION [FLEX]`](#tempo-loghr-start-end-duration-flex)
 * [`tempo list [WHEN]`](#tempo-list-when)
 * [`tempo delete WORKLOG_ID`](#tempo-delete-worklog_id)
 * [`tempo autocomplete [SHELL]`](#tempo-autocomplete-shell)
