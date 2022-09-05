@@ -55,7 +55,8 @@
     "/bin",
     "/dist",
     "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
+    "/oclif.manifest.json",
+    "/tsconfig.json"
   ],
   "dependencies": {
     "@oclif/command": "^1.5.19",
