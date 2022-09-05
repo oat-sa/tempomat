@@ -41,7 +41,7 @@ export type UserWorklogs = {
 
 export default {
 
-    async addWorklog(input: AddWorklogInput): Promise<Worklog> {
+    async addWorklog(input: AddWorklogInput, attributes?: Array<Object>): Promise<Worklog> {
         await checkToken()
         const referenceDate = parseWhenArg(time.now(), input.when)
         const parseResult = timeParser.parse(input.durationOrInterval, referenceDate)
@@ -58,7 +58,8 @@ export default {
             startDate: format(referenceDate, DATE_FORMAT),
             startTime: startTime(parseResult, input.startTime, referenceDate),
             description: input.description,
-            remainingEstimateSeconds: remainingEstimateSeconds(referenceDate, input.remainingEstimate)
+            remainingEstimateSeconds: remainingEstimateSeconds(referenceDate, input.remainingEstimate),
+            attributes
         })
         return toWorklog(worklogEntity)
     },

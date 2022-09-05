@@ -46,10 +46,10 @@ export default {
         }
     },
 
-    async addWorklog(input: AddWorklogInput): Promise<boolean> {
+    async addWorklog(input: AddWorklogInput, attributes?: Array<Object>): Promise<boolean> {
         return execute(async () => {
             cli.action.start('Logging time')
-            const worklog = await worklogs.addWorklog(input)
+            const worklog = await worklogs.addWorklog(input, attributes)
             cli.action.stop('Done.')
             console.log(chalk.greenBright(`Successfully logged ${worklog.duration} to ${worklog.issueKey}, type ${chalk.bold(`tempo d ${worklog.id}`)} to undo.`))
         })

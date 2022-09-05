@@ -48,6 +48,7 @@ Succesfully deleted worklog 123458. Deleted worklog details: ABC-1, 14:00-14:30 
 * [`tempo help [COMMAND]`](#tempo-help-command)
 * [`tempo setup`](#tempo-setup)
 * [`tempo log ISSUE_KEY_OR_ALIAS DURATION_OR_INTERVAL [WHEN]`](#tempo-log-issue_key_or_alias-duration_or_interval-when)
+* [`tempo logHR START END DURATION [FLEX]`](#tempo logHR START END DURATION)
 * [`tempo list [WHEN]`](#tempo-list-when)
 * [`tempo delete WORKLOG_ID`](#tempo-delete-worklog_id)
 * [`tempo autocomplete [SHELL]`](#tempo-autocomplete-shell)
@@ -133,6 +134,20 @@ EXAMPLES
   tempo log abc-123 1h15m --start 10:30
   tempo log abc-123 1h15m -s 9
 ```
+
+### `tempo logHR START END DURATION [FLEX]`
+
+REQUIREMENT
+  Create an alias for HR ticket. Something like `tempo alias:set HR tempo-25`
+
+USAGE
+  $ tempo logHR START END DURATION [FLEX]
+
+ARGUMENTS
+  START    work start time in hh:mm format, where mm is 00,15,30,45
+  END      work end time in hh:mm format, where mm is 00,15,30,45
+  DURATION work duration in hours in float format, like 5.5
+  [FLEX]   flex time in hours in float format, like 0.5
 
 ### `tempo list [WHEN]`
 
