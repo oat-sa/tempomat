@@ -21,7 +21,7 @@ export default class LogHR extends Command {
     static args = [
         {
             name: 'start',
-            description: 'start like 7:00',
+            description: 'start like 07:00',
             required: true
         },
         {
