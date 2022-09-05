@@ -149,6 +149,10 @@ ARGUMENTS
   END      work end time in hh:mm format, where mm is 00,15,30,45
   DURATION work duration in hours in float format, like 5.5
   [FLEX]   flex time in hours in float format, like 0.5
+
+EXAMPLES
+  tempo logHR 07:00 16:45 8.0
+  tempo logHR 07:30 17:30 8.0 0.5
 ```
 
 ### `tempo list [WHEN]`
