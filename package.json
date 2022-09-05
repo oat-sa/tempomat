@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc -p .",
     "test": "TZ=Europe/Warsaw jest",
-    "lint": "eslint --fix --ext .ts ."
+    "lint": "eslint --fix --ext .ts .",
+    "postinstall": "tsc -p ."
   },
   "author": "Szymon Kozak @szymonkozak",
   "license": "MIT",
