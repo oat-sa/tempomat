@@ -29,7 +29,12 @@ class Log extends command_1.Command {
                 description: flags.description,
                 startTime: flags.start,
                 remainingEstimate: flags['remaining-estimate']
-            });
+            }, [
+                {
+                    value: args.type,
+                    key: '_Type_'
+                }
+            ]);
         });
     }
 }
@@ -77,6 +82,11 @@ Log.args = [
     {
         name: 'duration_or_interval',
         description: 'worklog duration (e.g 15m) or interval (e.g 11:30-14)',
+        required: true
+    },
+    {
+        name: 'type',
+        description: 'worklog type like Development or Generaladministration',
         required: true
     },
     {

@@ -55,6 +55,11 @@ export default class Log extends Command {
             required: true
         },
         {
+            name: 'type',
+            description: 'worklog type like Development or Generaladministration',
+            required: true
+        },
+        {
             name: 'when',
             description: trimIndent(`date to add worklog, defaulted to today
       * date in YYYY-MM-DD format
@@ -73,6 +78,11 @@ export default class Log extends Command {
             description: flags.description,
             startTime: flags.start,
             remainingEstimate: flags['remaining-estimate']
-        })
+        }, [
+            {
+                value: args.type,
+                key: '_Type_'
+            }
+        ])
     }
 }
