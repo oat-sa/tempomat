@@ -15,7 +15,11 @@ export default class LogHR extends Command {
 
     static flags = {
         help: flags.help({ char: 'h' }),
-        debug: flags.boolean()
+        debug: flags.boolean(),
+        when: flags.string({
+            char: 'w',
+            description: 'date in YYYY-MM-DD format'
+        })
     }
 
     static args = [
@@ -47,7 +51,7 @@ export default class LogHR extends Command {
         await tempo.addWorklog({
             issueKeyOrAlias: 'HR',
             durationOrInterval: '1m',
-            when: args.when
+            when: flags.when
         }, [
             {
                 value: args.duration,
@@ -64,6 +68,10 @@ export default class LogHR extends Command {
             {
                 value: args.flex || '0',
                 key: '_Flextime_'
+            },
+            {
+                value: 'Generaladministration',
+                key: '_Type_'
             }
         ])
     }

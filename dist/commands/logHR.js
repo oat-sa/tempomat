@@ -24,7 +24,7 @@ class LogHR extends command_1.Command {
             yield tempo_1.default.addWorklog({
                 issueKeyOrAlias: 'HR',
                 durationOrInterval: '1m',
-                when: args.when
+                when: flags.when
             }, [
                 {
                     value: args.duration,
@@ -41,6 +41,10 @@ class LogHR extends command_1.Command {
                 {
                     value: args.flex || '0',
                     key: '_Flextime_'
+                },
+                {
+                    value: 'Generaladministration',
+                    key: '_Type_'
                 }
             ]);
         });
@@ -55,7 +59,11 @@ LogHR.examples = [
 LogHR.aliases = ['hr'];
 LogHR.flags = {
     help: command_1.flags.help({ char: 'h' }),
-    debug: command_1.flags.boolean()
+    debug: command_1.flags.boolean(),
+    when: command_1.flags.string({
+        char: 'w',
+        description: 'date in YYYY-MM-DD format'
+    })
 };
 LogHR.args = [
     {
