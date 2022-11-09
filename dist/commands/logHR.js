@@ -24,7 +24,8 @@ class LogHR extends command_1.Command {
             yield tempo_1.default.addWorklog({
                 issueKeyOrAlias: 'HR',
                 durationOrInterval: '1m',
-                when: flags.when
+                when: flags.when,
+                description: 'Daily total working time log'
             }, [
                 {
                     value: args.duration,

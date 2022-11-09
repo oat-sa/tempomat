@@ -51,7 +51,8 @@ export default class LogHR extends Command {
         await tempo.addWorklog({
             issueKeyOrAlias: 'HR',
             durationOrInterval: '1m',
-            when: flags.when
+            when: flags.when,
+            description: 'Daily total working time log'
         }, [
             {
                 value: args.duration,
